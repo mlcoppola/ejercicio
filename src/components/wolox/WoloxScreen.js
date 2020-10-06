@@ -1,5 +1,7 @@
 import React, { useContext, useEffect, useState } from 'react';
+import { useHistory } from 'react-router-dom';
 import { AuthContext } from '../../auth/AuthContext';
+import { types } from '../../types/types';
 import { Listado } from './Listado';
 
 export const WoloxScreen = () => {
@@ -7,10 +9,21 @@ export const WoloxScreen = () => {
     const [techs, setTechs] = useState([]);
     const [inputValue, setInputValue] = useState('');
 
+    const { user: { name }, dispatch } = useContext(AuthContext);
+    const history = useHistory();
+
     useEffect(() => {
         getTechnologies();
     }, []);
 
+    const handleLogout = () => {
+
+        history.replace('/auth/login');
+
+        dispatch({
+            type: types.logout
+        });
+    }
 
     const handleInputChange = (e) => {
         let value = e.target.value.toLowerCase();
@@ -43,13 +56,15 @@ export const WoloxScreen = () => {
 
     }
 
-    const { user: { name } } = useContext(AuthContext);
-
     return (
         <>
             <h1>WoloxScreen</h1>
 
-            <button>Logout</button>
+            <button
+                onClick={handleLogout}
+            >
+                Logout
+            </button>
 
             <input
                 type="text"
