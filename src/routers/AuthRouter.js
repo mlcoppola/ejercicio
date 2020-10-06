@@ -1,6 +1,6 @@
 import React from 'react'
 import { Switch, Route, Redirect } from 'react-router-dom';
-import { LoginScreen } from '../components/auth/LoginScreen';
+import { LoginScreen } from '../components/login/LoginScreen';
 
 export const AuthRouter = () => {
     return (

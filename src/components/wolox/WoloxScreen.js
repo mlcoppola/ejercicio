@@ -1,4 +1,5 @@
-import React, { useEffect, useState } from 'react'
+import React, { useContext, useEffect, useState } from 'react';
+import { AuthContext } from '../../auth/AuthContext';
 import { Listado } from './Listado';
 
 export const WoloxScreen = () => {
@@ -42,9 +43,13 @@ export const WoloxScreen = () => {
 
     }
 
+    const { user: { name } } = useContext(AuthContext);
+
     return (
         <>
             <h1>WoloxScreen</h1>
+
+            <button>Logout</button>
 
             <input
                 type="text"
@@ -58,6 +63,8 @@ export const WoloxScreen = () => {
                 <option value="ASC">ASC</option>
                 <option value="DESC">DESC</option>
             </select>
+
+            <span>{name}</span>
 
             <hr />
 
