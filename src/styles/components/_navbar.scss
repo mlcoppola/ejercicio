@@ -1,45 +1,50 @@
-nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+.navbar__nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar__login-button {
+  padding: 10px 20px;
+  border-radius: 50px;
+  width: 150px;
+  text-align: center;
+  text-decoration: none;
+  color: $blue;
+  border: 1px solid $blue;
+  transition: .3s ease;
+
+  &:hover {
+    background-color: $blue;
+    color: $white;
   }
-  
-  nav ul {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-  
-  nav ul li {
-    position: relative;
-    list-style-type: none;
-  }
-  
-  nav ul li a {
-    position: relative;
-    text-decoration: none;
-    font-weight: 500;
-    font-size: 1em;
-    padding: 0 35px;
-    border-right: 1px solid $white;
-    transition: all 0.5s ease-in-out;
-  }
-  
-  nav ul li a:hover {
-    color: $blue;
-  }
-  
-  nav ul li:last-child a {
-    border-right: none;
-  }
-  
-  .login-button {
-    padding: 10px 20px;
-    border-radius: 50px;
-    width: 150px;
-    text-align: center;
-    text-decoration: none;
-    color: $blue;
-    border: 1px solid $blue;
-  }
-  
+}
+
+nav ul {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav ul li {
+  position: relative;
+  list-style-type: none;
+}
+
+nav ul li a {
+  position: relative;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 1em;
+  padding: 0 35px;
+  border-right: 1px solid $white;
+  transition: all 0.5s ease-in-out;
+}
+
+nav ul li a:hover {
+  color: $blue;
+}
+
+nav ul li:last-child a {
+  border-right: none;
+}
