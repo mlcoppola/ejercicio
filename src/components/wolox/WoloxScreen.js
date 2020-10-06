@@ -4,7 +4,7 @@ import { AuthContext } from '../../auth/AuthContext';
 import { types } from '../../types/types';
 import { Listado } from './Listado';
 
-export const WoloxScreen = (props) => {
+export const WoloxScreen = () => {
 
     const [techs, setTechs] = useState([]);
     const [inputValue, setInputValue] = useState('');
@@ -41,25 +41,27 @@ export const WoloxScreen = (props) => {
             const data = await resp.json();
 
             if (isSubscribed) {
-                setTechs(data);
+                let sorted = data.sort((a, b) => {
+                    return a.tech.localeCompare(b.tech);
+                });
+                setTechs(sorted);
             }
         }
 
         fetchData();
 
         return () => isSubscribed = false
-    }, [props]);
+    }, []);
 
-    const sortNames = (e) => {
-        let orden = e?.target.value;
+    const setOrder = (e) => {
+        let orden = e.target.value;
 
         let sorted = techs.sort((a, b) => {
-            const isReversed = (orden === 'ASC' || orden === '') ? 1 : -1;
+            const isReversed = (orden === 'asc' || orden === '') ? 1 : -1;
             return isReversed * a.tech.localeCompare(b.tech);
         });
 
         setTechs([...sorted]);
-
     }
 
     return (
@@ -79,11 +81,11 @@ export const WoloxScreen = (props) => {
                 onChange={handleInputChange}
             />
 
-            <select onChange={sortNames}>
-                <option value="">Selecciona...</option>
-                <option value="ASC">ASC</option>
-                <option value="DESC">DESC</option>
-            </select>
+            <form>
+                <label>Orden: </label>
+                <input type="radio" label="asc" name="order" value="asc" defaultChecked={true} onClick={setOrder} /> Ascendente
+                <input type="radio" label="asc" name="order" value="desc" onClick={setOrder} /> Descendente
+            </form>
 
             <span>{name}</span>
 
