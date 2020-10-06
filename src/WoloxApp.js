@@ -14,6 +14,8 @@ export const WoloxApp = () => {
     useEffect(() => {
         if (user.saveSession) {
             localStorage.setItem('user', JSON.stringify(user));
+        } else {
+            localStorage.clear();
         }
     }, [user])
 
