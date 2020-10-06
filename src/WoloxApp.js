@@ -12,7 +12,9 @@ export const WoloxApp = () => {
     const [user, dispatch] = useReducer(authReducer, {}, init);
 
     useEffect(() => {
-        localStorage.setItem('user', JSON.stringify(user));
+        if (user.saveSession) {
+            localStorage.setItem('user', JSON.stringify(user));
+        }
     }, [user])
 
     return (

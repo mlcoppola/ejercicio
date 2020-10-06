@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import React, { useContext, useState } from 'react';
 import validator from 'email-validator';
 import { AuthContext } from '../../auth/AuthContext';
 import { useForm } from '../../hooks/useForm';
@@ -12,6 +12,12 @@ export const LoginScreen = ({ history }) => {
         email: '',
         password: ''
     });
+
+    const [checked, setChecked] = useState(false);
+
+    const handleCheckbox = (e) => {
+        setChecked(e.target.checked);
+    }
 
     const { email, password } = formValues;
 
@@ -35,7 +41,8 @@ export const LoginScreen = ({ history }) => {
                     dispatch({
                         type: types.login,
                         payload: {
-                            name: email
+                            name: email,
+                            saveSession: checked
                         }
                     });
 
@@ -83,7 +90,8 @@ export const LoginScreen = ({ history }) => {
                     Mantener conectado
                     <input
                         type="checkbox"
-                        name="mantener"
+                        name="saveSession"
+                        onChange={handleCheckbox}
                     />
                 </label>
             </form>
