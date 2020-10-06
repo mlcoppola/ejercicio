@@ -1,17 +1,21 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import {
     BrowserRouter as Router,
     Switch,
     Route,
     Redirect
 } from 'react-router-dom';
-
+import { AuthContext } from '../auth/AuthContext';
 
 import { Landing } from '../components/landing/Landing';
 import { WoloxScreen } from '../components/wolox/WoloxScreen';
 import { AuthRouter } from './AuthRouter';
+import { PrivateRoute } from './PrivateRoute';
 
 export const AppRouter = () => {
+
+    const { user } = useContext(AuthContext);
+
     return (
         <Router>
             <div>
@@ -21,11 +25,12 @@ export const AppRouter = () => {
                         component={AuthRouter}
                     />
 
-                    <Route
-                        exact
+                    <PrivateRoute
                         path="/listado"
                         component={WoloxScreen}
+                        isAuthenticated={user.logged}
                     />
+
                     <Route
                         exact
                         path="/"
