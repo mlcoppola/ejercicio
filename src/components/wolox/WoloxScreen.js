@@ -4,17 +4,13 @@ import { AuthContext } from '../../auth/AuthContext';
 import { types } from '../../types/types';
 import { Listado } from './Listado';
 
-export const WoloxScreen = () => {
+export const WoloxScreen = (props) => {
 
     const [techs, setTechs] = useState([]);
     const [inputValue, setInputValue] = useState('');
 
     const { user: { name }, dispatch } = useContext(AuthContext);
     const history = useHistory();
-
-    useEffect(() => {
-        getTechnologies();
-    }, []);
 
     const handleLogout = () => {
 
@@ -37,12 +33,22 @@ export const WoloxScreen = () => {
         )
     )
 
-    const getTechnologies = async () => {
-        const url = 'http://private-8e8921-woloxfrontendinverview.apiary-mock.com/techs';
-        const resp = await fetch(url);
-        const data = await resp.json();
-        setTechs(data);
-    }
+    useEffect(() => {
+        let isSubscribed = true;
+        const fetchData = async () => {
+            const url = 'http://private-8e8921-woloxfrontendinverview.apiary-mock.com/techs';
+            const resp = await fetch(url);
+            const data = await resp.json();
+
+            if (isSubscribed) {
+                setTechs(data);
+            }
+        }
+
+        fetchData();
+
+        return () => isSubscribed = false
+    }, [props]);
 
     const sortNames = (e) => {
         let orden = e?.target.value;
