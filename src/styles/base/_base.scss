@@ -8,6 +8,7 @@
   font-family: "Ubuntu", sans-serif;
   box-sizing: border-box;
   color: $dark;
+  overflow-x: hidden;
 }
 
 html,
@@ -19,12 +20,6 @@ body {
 button:hover {
   cursor: pointer;
 }
-
-// body {
-//   padding: 50px;
-//   background: url(../../assets/Backgrounds/Bg_Header@3x.png) no-repeat right top;
-//   color: $font;
-// }
 
 .container {
   max-width: 1005px;
