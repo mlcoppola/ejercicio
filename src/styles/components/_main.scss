@@ -1,0 +1,215 @@
+.main__container {
+  background: url(../../assets/Backgrounds/Bg_Header@3x.png);
+  max-width: 1005px;
+  margin: 0 auto;
+  padding: 2em 1em;
+}
+
+.main__hero {
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+
+  h1,
+  span {
+    font-size: 50px;
+    font-weight: 200;
+  }
+
+  strong {
+    font-size: 45px;
+    font-weight: 500;
+  }
+}
+
+.main__hero-image {
+  img {
+    width: 500px;
+  }
+}
+
+.main__green {
+  color: $green;
+  font-weight: 500;
+}
+
+// Technologies
+
+.main__technologies {
+  display: flex;
+  flex-flow: row;
+  justify-content: space-between;
+  padding: 60px 20px;
+}
+
+.main__searching {
+  color: $font;
+  display: flex;
+  flex-direction: column;
+  font-size: 2.3rem;
+  font-weight: 400;
+  justify-content: center;
+}
+
+.main__list-technologies {
+  width: 500px;
+}
+
+// Information
+
+.main__information {
+  display: flex;
+  justify-content: space-between;
+}
+
+.main__woloxers {
+  align-items: center;
+  background: url(../../assets/img_woloxer.png);
+  display: flex;
+  flex-direction: column;
+  height: 400px;
+  justify-content: space-around;
+  text-align: center;
+  width: 50%;
+}
+
+.text-green,
+.text-blue {
+  font-size: 35px;
+}
+
+.text-green {
+  color: $green;
+}
+.text-blue {
+  color: $blue;
+}
+.text-dark {
+  color: $dark;
+}
+
+.main__info-twitter {
+  align-items: center;
+  color: $white;
+  display: flex;
+}
+
+.twitter-white {
+  color: $white;
+  font-size: 35px;
+}
+
+.main__explanation {
+  background: $dark-grey;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  width: 50%;
+
+  span {
+    font-size: 30px;
+  }
+}
+
+.main__siguenos-button {
+  background-color: transparent;
+  border: 1px solid $blue;
+  border-radius: 50px;
+  color: $white;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  transition: 0.3s ease;
+  width: 150px;
+
+  &:hover {
+    background-color: $blue;
+    color: $white;
+  }
+}
+
+// Beneficios
+
+.main__beneficios {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  min-height: 400px;
+}
+
+.main__texto-beneficios {
+  padding: 10px;
+  text-align: center;
+
+  span {
+    color: $blue;
+  }
+}
+
+.main__contenedor-beneficios {
+  display: flex;
+  justify-content: space-between;
+  list-style: none;
+
+  li {
+    align-items: center;
+    display: flex;
+    flex-basis: 0;
+    flex-direction: column;
+    min-width: 150px;
+  }
+
+  p {
+    font-size: 12px;
+    text-align: center;
+  }
+}
+
+.main__logo-beneficio {
+  width: 60px;
+}
+
+// Requerimientos
+
+.main__requirements {
+  display: flex;
+  justify-content: space-between;
+  min-height: 300px;
+}
+
+.main__texto-requerimientos {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  font-size: 20px;
+  font-weight: 700;
+  text-align: center;
+  width: 40%;
+}
+
+.main__item-requerimientos {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  list-style: none;
+}
+
+.main__dot {
+  border-radius: 50%;
+  display: inline-block;
+  height: 10px;
+  width: 10px;
+}
+
+.green {
+  background-color: $green;
+}
+
+.dark {
+  background-color: $dark;
+}
+
+.blue {
+  background-color: $blue;
+}
