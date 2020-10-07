@@ -58,35 +58,38 @@ export const LoginScreen = ({ history }) => {
             <h3 className="auth__title">Login</h3>
 
             <form onSubmit={handleLogin}>
-                <input
-                    type="text"
-                    placeholder="email"
-                    name="email"
-                    className="auth__input"
-                    autoComplete="off"
-                    value={email}
-                    onChange={handleInputChange}
-                />
+                <div className="auth__row">
+                    <label htmlFor="email">Email</label>
+                    <input
+                        type="text"
+                        name="email"
+                        className="auth__input"
+                        autoComplete="off"
+                        value={email}
+                        onChange={handleInputChange}
+                    />
+                </div>
 
-                <input
-                    type="password"
-                    placeholder="Password"
-                    name="password"
-                    className="auth__input"
-                    value={password}
-                    onChange={handleInputChange}
-                />
+                <div className="auth__row">
+                    <label htmlFor="password">Password</label>
+                    <input
+                        type="password"
+                        name="password"
+                        className="auth__input"
+                        value={password}
+                        onChange={handleInputChange}
+                    />
+                </div>
+
 
                 <button
                     type="submit"
-                    className="btn btn-primary"
+                    className="auth__button"
                 >
                     Ingresar
                 </button>
 
-                <hr />
-
-                <label htmlFor="mantener">
+                <label htmlFor="mantener" className="auth__mantener">
                     Mantener conectado
                     <input
                         type="checkbox"
