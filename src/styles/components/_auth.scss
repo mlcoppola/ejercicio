@@ -96,6 +96,15 @@ form {
     text-align: center;
 }
 
+.enlace {
+    text-decoration: none;
+
+    &:hover {
+        color: $blue;
+        text-decoration: underline;
+    }
+}
+
 @media(max-width: 458px) {
   
     body {

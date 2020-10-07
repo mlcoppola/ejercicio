@@ -3,6 +3,7 @@ import validator from 'email-validator';
 import { AuthContext } from '../../auth/AuthContext';
 import { useForm } from '../../hooks/useForm';
 import { types } from '../../types/types';
+import { Link } from 'react-router-dom';
 
 export const LoginScreen = ({ history }) => {
 
@@ -16,7 +17,6 @@ export const LoginScreen = ({ history }) => {
     const [checked, setChecked] = useState(false);
 
     const handleCheckbox = (e) => {
-        console.log('ejecutada')
         setChecked(e.target.checked);
     }
 
@@ -96,8 +96,11 @@ export const LoginScreen = ({ history }) => {
                         type="checkbox"
                         name="saveSession"
                         onChange={handleCheckbox}
+                        id="mantener"
                     />
                 </label>
+
+                <Link to="/" className="auth__mantener enlace">Ir a la landing</Link>
             </form>
         </>
     )
