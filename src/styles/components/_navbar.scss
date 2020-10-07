@@ -5,14 +5,15 @@
 }
 
 .navbar__login-button {
-  padding: 10px 20px;
+  background-color: $white;
+  border: 1px solid $blue;
   border-radius: 50px;
-  width: 150px;
+  color: $blue;
+  padding: 10px 20px;
   text-align: center;
   text-decoration: none;
-  color: $blue;
-  border: 1px solid $blue;
   transition: .3s ease;
+  width: 150px;
 
   &:hover {
     background-color: $blue;

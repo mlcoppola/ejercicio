@@ -11,7 +11,7 @@ import hero from '../../assets/Img Hero/Ic_ilustra_Hero@3x.png';
 
 export const Main = () => {
     return (
-        <main className="main__container">
+        <main className="main__container" id="main">
             <section className="main__hero">
                 <h1>Bienvenido a tu <strong>Entrevista Técnica</strong> en <span className="main__green">Wolox</span></h1>
                 <div className="main__hero-image">
@@ -19,7 +19,7 @@ export const Main = () => {
                 </div>
             </section>
 
-            <section className="main__technologies">
+            <section className="main__technologies" id="technologies">
                 <h4 className="main__searching">
                     Estamos buscando para incorporar gente increíble para estas
                     tecnologías:
@@ -43,7 +43,7 @@ export const Main = () => {
                 </div>
             </section>
 
-            <div className="main__beneficios">
+            <div className="main__beneficios" id="benefits">
                 <p className="main__texto-beneficios">Entre los beneficios que ofrecemos se encuentran <span>;)</span></p>
 
                 <ul className="main__contenedor-beneficios">
@@ -74,7 +74,7 @@ export const Main = () => {
                 </ul>
             </div>
 
-            <div className="main__requirements">
+            <div className="main__requirements" id="requirements">
                 <p className="main__texto-requerimientos">Requerimientos</p>
                 <ul className="main__item-requerimientos">
                     <li> <div className="main__dot green"></div> Estudiantes avanzados o recibidos de carreras del rubro informático, sistemas o electrónicos.</li>

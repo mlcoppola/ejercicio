@@ -1,19 +1,21 @@
 import React from 'react';
 import Logo from '../../assets/logo_full_color.svg';
 
+import { HashLink as Link } from 'react-router-hash-link';
+
 export const Navbar = () => {
     return (
         <header className="container">
             <nav className="navbar__nav">
                 <img className="logo" src={Logo} alt="Logo" />
                 <ul>
-                    <li><a href="#">Inicio</a></li>
-                    <li><a href="#">Tecnologías</a></li>
-                    <li><a href="#">Beneficios</a></li>
-                    <li><a href="#">Requerimientos</a></li>
+                    <li><Link to="#main">Inicio</Link></li>
+                    <li><Link to="#technologies">Tecnologías</Link></li>
+                    <li><Link to="#benefits">Beneficios</Link></li>
+                    <li><Link to="#requirements">Requerimientos</Link></li>
                 </ul>
 
-                <a href="#" className="navbar__login-button">Login</a>
+                <button className="navbar__login-button">Login</button>
             </nav>
         </header>
     )
