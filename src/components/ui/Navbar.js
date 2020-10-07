@@ -1,7 +1,8 @@
 import React from 'react';
 import Logo from '../../assets/logo_full_color.svg';
 
-import { HashLink as Link } from 'react-router-hash-link';
+import { HashLink } from 'react-router-hash-link';
+import { Link } from 'react-router-dom';
 
 export const Navbar = () => {
     return (
@@ -9,13 +10,18 @@ export const Navbar = () => {
             <nav className="navbar__nav">
                 <img className="logo" src={Logo} alt="Logo" />
                 <ul>
-                    <li><Link to="#main">Inicio</Link></li>
-                    <li><Link to="#technologies">Tecnologías</Link></li>
-                    <li><Link to="#benefits">Beneficios</Link></li>
-                    <li><Link to="#requirements">Requerimientos</Link></li>
+                    <li><HashLink to="#main">Inicio</HashLink></li>
+                    <li><HashLink to="#technologies">Tecnologías</HashLink></li>
+                    <li><HashLink to="#benefits">Beneficios</HashLink></li>
+                    <li><HashLink to="#requirements">Requerimientos</HashLink></li>
                 </ul>
 
-                <button className="navbar__login-button">Login</button>
+                <Link
+                    to="/auth/login"
+                    className="navbar__login-button"
+                >
+                    Login
+                </Link>
             </nav>
         </header>
     )

@@ -3,12 +3,15 @@ import React from 'react';
 export const Footer = () => {
     return (
         <footer className="footer__container">
-            <p>
-                <h4 className="footer__agradecimiento">Gracias por <span>completar el ejercicio</span></h4>
-                <p className="footer__mas-info">Te invitamos a ver más información</p>
-            </p>
+            <div>
+                <span className="footer__agradecimiento">Gracias por <span>completar el ejercicio</span></span>
+                <div className="footer__mas-info">Te invitamos a ver más información</div>
+            </div>
 
-            <button className="footer__button-conocer">Conocer más</button>
+            <button 
+                className="footer__button-conocer"
+                onClick={() => window.open("https://www.wolox.com.ar/", "_blank")}
+            >Conocer más</button>
 
             <p>WOLOX</p>
         </footer>

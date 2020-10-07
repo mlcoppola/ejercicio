@@ -33,9 +33,12 @@ export const Main = () => {
                 <div className="main__woloxers">
                     <p> <span className="text-green">350 +</span> <span className="text-blue">Woloxers</span></p>
 
-                    <span class="main__info-twitter"> <i class="fab fa-twitter twitter-white"></i> @wolox</span>
+                    <span className="main__info-twitter"> <i className="fab fa-twitter twitter-white"></i> @wolox</span>
 
-                    <button className="main__siguenos-button">Siguenos</button>
+                    <button
+                        className="main__siguenos-button"
+                        onClick={() => window.open("https://twitter.com/Wolox", "_blank")}
+                    >Siguenos</button>
                 </div>
 
                 <div className="main__explanation">
