@@ -16,6 +16,7 @@ export const LoginScreen = ({ history }) => {
     const [checked, setChecked] = useState(false);
 
     const handleCheckbox = (e) => {
+        console.log('ejecutada')
         setChecked(e.target.checked);
     }
 

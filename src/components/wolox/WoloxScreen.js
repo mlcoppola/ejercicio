@@ -66,41 +66,51 @@ export const WoloxScreen = () => {
 
     return (
         <>
-            <h1>WoloxScreen</h1>
 
-            <button
-                onClick={handleLogout}
-            >
-                Logout
-            </button>
+            <div className="listado__contenedor-superior">
+                <span className="listado__bienvenida">Bienvenido {name}</span>
 
-            <input
-                type="text"
-                placeholder="Buscar tecnología"
-                value={inputValue}
-                onChange={handleInputChange}
-            />
 
-            <form>
-                <label>Orden: </label>
-                <input type="radio" label="asc" name="order" value="asc" defaultChecked={true} onClick={setOrder} /> Ascendente
-                <input type="radio" label="asc" name="order" value="desc" onClick={setOrder} /> Descendente
-            </form>
+                <input
+                    type="text"
+                    placeholder="Buscar tecnología"
+                    value={inputValue}
+                    onChange={handleInputChange}
+                    className="listado__buscador"
+                />
 
-            <span>{name}</span>
+                <div className="listado__orden">
+                    <div className="listado__row">
+                        <input type="radio" label="asc" name="order" value="asc" defaultChecked={true} onClick={setOrder} /> Ascendente
+                    </div>
+                    <div className="listado__row">
+                        <input type="radio" label="asc" name="order" value="desc" onClick={setOrder} /> Descendente
+                    </div>
+                </div>
 
-            <hr />
 
-            {
-                filterTechs().map(tech => (
-                    <Listado
-                        key={tech.tech}
-                        tech={tech}
-                    />
-                ))
-            }
+                <button
+                    onClick={handleLogout}
+                    className="listado__boton-logout"
+                >
+                    Logout
+                </button>
 
-            <h4>Cantidad de tecnologías {filterTechs().length}</h4>
+            </div>
+
+            <div className="listado__contenedor-tecnologias">
+
+                {
+                    filterTechs().map(tech => (
+                        <Listado
+                            key={tech.tech}
+                            tech={tech}
+                        />
+                    ))
+                }
+
+                <div className="listado__float">Cantidad de tecnologías: {filterTechs().length}</div>
+            </div>
         </>
     )
 }
