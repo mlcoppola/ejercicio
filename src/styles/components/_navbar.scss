@@ -12,7 +12,7 @@
   padding: 10px 20px;
   text-align: center;
   text-decoration: none;
-  transition: .3s ease;
+  transition: 0.3s ease;
   width: 150px;
 
   &:hover {
@@ -48,4 +48,27 @@ nav ul li a:hover {
 
 nav ul li:last-child a {
   border-right: none;
+}
+
+// Media queries
+
+@media only screen and (max-width: 830px) {
+  .navbar__nav {
+    flex-direction: column;
+    min-height: 170px;
+  }
+}
+
+@media only screen and (max-width: 575px) {
+  .navbar__nav {
+    ul {
+      flex-direction: column;
+      width: 100%;
+      padding: 10px;
+    }
+
+    ul li a {
+      border: none;
+    }
+  }
 }

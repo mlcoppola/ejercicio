@@ -1,121 +1,115 @@
 .auth__main {
-    align-items: center;
-    background-color: $white;
-    display: flex;
-    justify-content: center;
-    margin: 0px;
-    height: 100vh;
-    width: 100vw;
+  align-items: center;
+  background-color: $white;
+  display: flex;
+  justify-content: center;
+  margin: 0px;
+  height: 100vh;
+  width: 100vw;
 }
 
 .auth__box-container {
-    align-items: center;
-    background-color: $white;
-    border-radius: 2px;
-    display: flex;
-    flex-direction: column;
-    padding: 20px;
-    width: 50%;
+  align-items: center;
+  background-color: $white;
+  border-radius: 2px;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  width: 50%;
 }
 
 .auth__title {
-    margin-top: 48px;
-    font-size: 1.3rem;
-    font-family: 'fira-sans';
+  margin-top: 48px;
+  font-size: 1.3rem;
+  font-family: "fira-sans";
 }
 
 form {
-    background: $white;
-    border: 1px solid $dark-grey;
-    border-radius: 4px;
-    box-shadow: 0 0 5px 0 rgba(42, 45, 48, 0.12);
-    max-width: 360px;
-    padding: 58px 44px;
-    transition: all 0.3s ease;
-    width: 100%;
+  background: $white;
+  border: 1px solid $dark-grey;
+  border-radius: 4px;
+  box-shadow: 0 0 5px 0 rgba(42, 45, 48, 0.12);
+  max-width: 360px;
+  padding: 58px 44px;
+  transition: all 0.3s ease;
+  width: 100%;
 }
 
 .auth__row {
-    display: flex;
-    flex-direction: column;
-    margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
 
-    label {
-        color: $blue;
-        font-size: 13px;
+  label {
+    color: $blue;
+    font-size: 13px;
+  }
+
+  input {
+    flex: 1;
+    padding: 13px;
+    border: 1px solid darken($color: $dark-grey, $amount: 5);
+    border-radius: 4px;
+    font-size: 16px;
+    transition: all 0.2s ease-out;
+
+    &:focus {
+      outline: none;
+      box-shadow: inset 2px 2px 5px 0 rgba(42, 45, 48, 0.12);
     }
-
-    input {
-        flex: 1;
-        padding: 13px;
-        border: 1px solid darken($color: $dark-grey, $amount: 5);
-        border-radius: 4px;
-        font-size: 16px;
-        transition: all 0.2s ease-out;
-
-        &:focus {
-            outline: none;
-            box-shadow: inset 2px 2px 5px 0 rgba(42, 45, 48, 0.12);
-        }
-    }
+  }
 }
 
 .auth__alert-error {
-    background-color: red;
-    border-radius: 5px;
-    color: white;
-    display: flex;
-    justify-content: center;
-    margin-bottom: 10px;
-    padding: 5px;
+  background-color: red;
+  border-radius: 5px;
+  color: white;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 10px;
+  padding: 5px;
 }
 
 .auth__button {
-    width: 100%;
-    padding: 12px;
-    font-size: 18px;
-    background: $green;
-    color: $white;
-    border: none;
-    border-radius: 100px;
-    cursor: pointer;
-    font-family: 'fira-sans';
-    margin-top: 15px;
-    transition: background 0.2s ease-out;
+  width: 100%;
+  padding: 12px;
+  font-size: 18px;
+  background: $green;
+  color: $white;
+  border: none;
+  border-radius: 100px;
+  cursor: pointer;
+  font-family: "fira-sans";
+  margin-top: 15px;
+  transition: background 0.2s ease-out;
 
-    &:hover {
-        background: $blue;
-    }
+  &:hover {
+    background: $blue;
+  }
 }
 
 .auth__mantener {
-    align-items: center;
-    display: flex;
-    justify-content: center;
-    margin-top: 15px;
-    text-align: center;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  margin-top: 15px;
+  text-align: center;
 }
 
 .enlace {
-    text-decoration: none;
+  text-decoration: none;
 
-    &:hover {
-        color: $blue;
-        text-decoration: underline;
-    }
+  &:hover {
+    color: $blue;
+    text-decoration: underline;
+  }
 }
 
-@media(max-width: 458px) {
-  
-    body {
-      margin: 0 18px;
-    }
-    
-    form {
-      background: $white;
-      border: none;
-      box-shadow: none;
-      padding: 20px 0;
-    }
-  
+@media (max-width: 458px) {
+  form {
+    background: $white;
+    border: none;
+    box-shadow: none;
+    padding: 20px 0;
   }
+}
