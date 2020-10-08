@@ -1,6 +1,6 @@
 import React from 'react';
 
-export const Footer = () => {
+export default function Footer() {
     return (
         <footer className="footer__container">
             <div>
@@ -8,7 +8,7 @@ export const Footer = () => {
                 <div className="footer__mas-info">Te invitamos a ver más información</div>
             </div>
 
-            <button 
+            <button
                 className="footer__button-conocer"
                 onClick={() => window.open("https://www.wolox.com.ar/", "_blank")}
             >Conocer más</button>

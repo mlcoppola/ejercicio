@@ -4,7 +4,7 @@ import Logo from '../../assets/logo_full_color.svg';
 import { HashLink } from 'react-router-hash-link';
 import { Link } from 'react-router-dom';
 
-export const Navbar = () => {
+export default function Navbar() {
     return (
         <header className="container">
             <nav className="navbar__nav">

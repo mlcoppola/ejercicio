@@ -9,7 +9,7 @@ import brain from '../../assets/Ic_brain.svg';
 import technologies from '../../assets/Ic_Tecnologys.svg';
 import hero from '../../assets/Img Hero/Ic_ilustra_Hero@3x.png';
 
-export const Main = () => {
+export default function Main() {
     return (
         <main className="main__container" id="main">
             <section className="main__hero">
