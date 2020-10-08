@@ -1,14 +1,16 @@
 import React, { useContext, useEffect, useState } from 'react';
 import { useHistory } from 'react-router-dom';
 import { AuthContext } from '../../auth/AuthContext';
+import { useFetch } from '../../hooks/useFetch';
 import { types } from '../../types/types';
 import { Listado } from './Listado';
 
 export const WoloxScreen = () => {
 
+    const url = 'http://private-8e8921-woloxfrontendinverview.apiary-mock.com/techs';
+    const { sortedData } = useFetch(url);
     const [techs, setTechs] = useState([]);
     const [inputValue, setInputValue] = useState('');
-
     const { user: { name }, dispatch } = useContext(AuthContext);
     const history = useHistory();
 
@@ -34,24 +36,10 @@ export const WoloxScreen = () => {
     )
 
     useEffect(() => {
-        let isSubscribed = true;
-        const fetchData = async () => {
-            const url = 'http://private-8e8921-woloxfrontendinverview.apiary-mock.com/techs';
-            const resp = await fetch(url);
-            const data = await resp.json();
-
-            if (isSubscribed) {
-                let sorted = data.sort((a, b) => {
-                    return a.tech.localeCompare(b.tech);
-                });
-                setTechs(sorted);
-            }
+        if (sortedData) {
+            setTechs(sortedData);
         }
-
-        fetchData();
-
-        return () => isSubscribed = false
-    }, []);
+    }, [sortedData])
 
     const setOrder = (e) => {
         let orden = e.target.value;
