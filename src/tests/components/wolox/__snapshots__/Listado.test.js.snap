@@ -1,0 +1,44 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Pruebas en <Listado /> debe de mostrarse correctamente 1`] = `
+<div
+  className="listado__tecnologia"
+>
+  <div
+    className="listado__contenedor-imagen"
+  >
+    <img
+      alt="test"
+      src="test"
+    />
+  </div>
+  <div
+    className="listado__contenedor-info"
+  >
+    <p>
+      Tecnología: 
+      test
+    </p>
+    <p>
+      Año: 
+      test
+    </p>
+    <p>
+      Autor: 
+      test
+    </p>
+    <p>
+      Licencia: 
+      test
+    </p>
+    <p>
+      Lenguaje: 
+      test
+    </p>
+    <p>
+      Tipo: 
+      test
+    </p>
+  </div>
+</div>
+`;

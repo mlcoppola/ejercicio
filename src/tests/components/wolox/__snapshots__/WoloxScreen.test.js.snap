@@ -1,0 +1,67 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Pruebas en <WoloxScreen /> debe de mostrar el componente correctamente 1`] = `
+<Fragment>
+  <div
+    className="listado__contenedor-superior"
+  >
+    <span
+      className="listado__bienvenida"
+    >
+      Bienvenido 
+    </span>
+    <input
+      className="listado__buscador"
+      onChange={[Function]}
+      placeholder="Buscar tecnología"
+      type="text"
+      value=""
+    />
+    <div
+      className="listado__orden"
+    >
+      <div
+        className="listado__row"
+      >
+        <input
+          defaultChecked={true}
+          label="asc"
+          name="order"
+          onClick={[Function]}
+          type="radio"
+          value="asc"
+        />
+         Ascendente
+      </div>
+      <div
+        className="listado__row"
+      >
+        <input
+          label="asc"
+          name="order"
+          onClick={[Function]}
+          type="radio"
+          value="desc"
+        />
+         Descendente
+      </div>
+    </div>
+    <button
+      className="listado__boton-logout"
+      onClick={[Function]}
+    >
+      Logout
+    </button>
+  </div>
+  <div
+    className="listado__contenedor-tecnologias"
+  >
+    <div
+      className="listado__float"
+    >
+      Cantidad de tecnologías: 
+      0
+    </div>
+  </div>
+</Fragment>
+`;
