@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 export const Listado = ({ tech }) => {
     return (
@@ -18,4 +19,8 @@ export const Listado = ({ tech }) => {
             </div>
         </div>
     )
+}
+
+Listado.propTypes = {
+    tech: PropTypes.object.isRequired,
 }
