@@ -6,7 +6,7 @@ import { useForm } from '../../hooks/useForm';
 import { types } from '../../types/types';
 import { Link } from 'react-router-dom';
 
-export const LoginScreen = ({ history }) => {
+export default function LoginScreen({ history }) {
 
     const { dispatch } = useContext(AuthContext);
 

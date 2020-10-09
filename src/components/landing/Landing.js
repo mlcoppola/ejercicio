@@ -1,18 +1,14 @@
-import React, { Suspense, lazy } from 'react';
-import { Loading } from '../loading/Loading';
+import React from 'react';
+import Navbar from '../ui/Navbar';
+import Footer from './Footer';
+import Main from './Main';
 
-const Navbar = lazy(() => import('../ui/Navbar'));
-const Footer = lazy(() => import('./Footer'));
-const Main = lazy(() => import('./Main'));
-
-export const Landing = () => {
+export default function Landing() {
     return (
         <div className="animate__animated animate__fadeIn">
-            <Suspense fallback={<Loading />}>
-                <Navbar />
-                <Main />
-                <Footer />
-            </Suspense>
+            <Navbar />
+            <Main />
+            <Footer />
         </div>
     )
 }

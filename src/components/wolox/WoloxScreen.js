@@ -5,7 +5,7 @@ import { useFetch } from '../../hooks/useFetch';
 import { types } from '../../types/types';
 import { Listado } from './Listado';
 
-export const WoloxScreen = () => {
+export default function WoloxScreen() {
 
     const url = 'http://private-8e8921-woloxfrontendinverview.apiary-mock.com/techs';
     const { sortedData } = useFetch(url);

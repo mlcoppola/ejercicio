@@ -54,7 +54,7 @@ exports[`Pruebas en <WoloxScreen /> debe de mostrar el componente correctamente 
     </button>
   </div>
   <div
-    className="listado__contenedor-tecnologias"
+    className="listado__contenedor-tecnologias animate__animated animate__fadeIn"
   >
     <div
       className="listado__float"

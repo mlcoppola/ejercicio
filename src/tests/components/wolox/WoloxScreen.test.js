@@ -2,7 +2,7 @@
 import React from 'react';
 
 import { shallow } from 'enzyme';
-import { WoloxScreen } from '../../../components/wolox/WoloxScreen';
+import WoloxScreen from '../../../components/wolox/WoloxScreen';
 
 jest.mock('react', () => {
     const ActualReact = require.requireActual('react');
