@@ -15,6 +15,7 @@ export const LoginScreen = ({ history }) => {
     });
 
     const [checked, setChecked] = useState(false);
+    const [errorMsg, setErrorMsg] = useState('');
 
     const handleCheckbox = (e) => {
         setChecked(e.target.checked);
@@ -25,40 +26,50 @@ export const LoginScreen = ({ history }) => {
     const handleLogin = (e) => {
         e.preventDefault();
 
-        if (validator.validate(email) && password) {
-
-            const url = 'http://private-8e8921-woloxfrontendinverview.apiary-mock.com/login';
-            const data = { email, password };
-
-            fetch(url, {
-                method: 'POST',
-                body: JSON.stringify(data),
-                headers: {
-                    'Content-Type': 'application/json'
-                }
-            }).then(res => res.json())
-                .catch(error => console.error('Error:', error))
-                .then(() => {
-                    dispatch({
-                        type: types.login,
-                        payload: {
-                            name: email,
-                            saveSession: checked
-                        }
-                    });
-
-                    history.replace('/listado');
-                });
+        if (!validator.validate(email)) {
+            setErrorMsg('Email inválido');
+            return;
         }
 
-    }
+        if (password.trim().length < 2) {
+            setErrorMsg('Debes ingresar una contraseña con más de 2 letras');
+            return;
+        }
 
+        const url = 'http://private-8e8921-woloxfrontendinverview.apiary-mock.com/login';
+        const data = { email, password };
+
+        fetch(url, {
+            method: 'POST',
+            body: JSON.stringify(data),
+            headers: {
+                'Content-Type': 'application/json'
+            }
+        }).then(res => res.json())
+            .catch(error => console.error('Error:', error))
+            .then(() => {
+                dispatch({
+                    type: types.login,
+                    payload: {
+                        name: email,
+                        saveSession: checked
+                    }
+                });
+
+                history.replace('/listado');
+            });
+
+
+    }
 
     return (
         <>
             <h3 className="auth__title">Login</h3>
-
             <form onSubmit={handleLogin}>
+                {
+                    errorMsg &&
+                    <div className="auth__alert-error">{errorMsg}</div>
+                }
                 <div className="auth__row">
                     <label htmlFor="email">Email</label>
                     <input
@@ -82,7 +93,6 @@ export const LoginScreen = ({ history }) => {
                     />
                 </div>
 
-
                 <button
                     type="submit"
                     className="auth__button"
@@ -102,6 +112,7 @@ export const LoginScreen = ({ history }) => {
 
                 <Link to="/" className="auth__mantener enlace">Ir a la landing</Link>
             </form>
+
         </>
     )
 }
