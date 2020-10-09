@@ -1,4 +1,5 @@
 import React, { useContext, useState } from 'react';
+import PropTypes from 'prop-types';
 import validator from 'email-validator';
 import { AuthContext } from '../../auth/AuthContext';
 import { useForm } from '../../hooks/useForm';
@@ -115,4 +116,8 @@ export const LoginScreen = ({ history }) => {
 
         </div>
     )
+}
+
+LoginScreen.propTypes = {
+    history: PropTypes.object.isRequired
 }
