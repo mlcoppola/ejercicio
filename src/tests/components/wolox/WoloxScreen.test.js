@@ -1,6 +1,6 @@
 import React from 'react';
 
-const { shallow, mount } = require('enzyme');
+const { shallow } = require('enzyme');
 const { WoloxScreen } = require('../../../components/wolox/WoloxScreen');
 
 jest.mock('react', () => {

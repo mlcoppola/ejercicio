@@ -1,6 +1,6 @@
 .auth__main {
   align-items: center;
-  background-color: $white;
+  background: url(../../assets/Backgrounds/Bg_Header.png);
   display: flex;
   justify-content: center;
   margin: 0px;
@@ -22,6 +22,7 @@
   margin-top: 48px;
   font-size: 1.3rem;
   font-family: "fira-sans";
+  text-align: center;
 }
 
 form {
