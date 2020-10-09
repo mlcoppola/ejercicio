@@ -99,3 +99,18 @@
 
   box-shadow: 2px 2px 3px #999;
 }
+
+// Media queries
+
+@media only screen and (max-width: 770px) {
+  .listado__contenedor-superior {
+    flex-direction: column;
+    min-height: 270px;
+  }
+
+  .listado__float {
+    left: 50%;
+    right: 0px;
+    transform: translateX(-50%);
+  }
+}

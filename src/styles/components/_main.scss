@@ -127,11 +127,15 @@
     background-color: $blue;
     color: $white;
   }
+  &:focus {
+    outline: none;
+  }
 }
 
 // Beneficios
 
 .main__beneficios {
+  background-color: $white;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
@@ -249,6 +253,10 @@
 
   .main__information {
     flex-direction: column;
+  }
+
+  .main__explanation {
+    height: 400px;
   }
 
   .main__explanation,

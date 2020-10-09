@@ -26,6 +26,10 @@
     background-color: $white;
     color: $blue;
   }
+
+  &:focus {
+    outline: none;
+  }
 }
 
 .footer__agradecimiento {
@@ -42,4 +46,8 @@
 .footer__mas-info {
   font-size: 22px;
   font-weight: 500;
+}
+
+.footer__wolox {
+  font-family: 'montserrat';
 }

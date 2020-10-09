@@ -86,6 +86,9 @@ form {
   &:hover {
     background: $blue;
   }
+  &:focus {
+    outline: none;
+  }
 }
 
 .auth__mantener {
@@ -102,6 +105,32 @@ form {
   &:hover {
     color: $blue;
     text-decoration: underline;
+  }
+}
+
+// Media queries
+
+@media only screen and (max-width: 810px) {
+  .auth__box-container {
+    width: 100%;
+  }
+  .listado__tecnologia {
+    flex-direction: column;
+  }
+
+  .listado__contenedor-imagen {
+    width: 100% !important;
+  }
+
+  .listado__contenedor-info {
+    width: 100% !important;
+    border-right: 1px solid $dark-grey;
+  }
+  .listado__contenedor-imagen {
+    img {
+      width: auto;
+      height: auto;
+    }
   }
 }
 

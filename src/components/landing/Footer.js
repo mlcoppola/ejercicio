@@ -13,7 +13,7 @@ export default function Footer() {
                 onClick={() => window.open("https://www.wolox.com.ar/", "_blank")}
             >Conocer más</button>
 
-            <p>WOLOX</p>
+            <p className="footer__wolox">WOLOX</p>
         </footer>
     )
 }
