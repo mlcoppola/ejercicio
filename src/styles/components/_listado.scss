@@ -88,10 +88,15 @@
 }
 
 .listado__float {
-  background-color: $green;
+  background: rgb(0, 167, 232);
+  background: linear-gradient(
+    90deg,
+    rgba(0, 167, 232, 1) 0%,
+    rgba(163, 204, 57, 1) 100%
+  );
   bottom: 40px;
   border-radius: 50px;
-  color: $white;
+  color: $font;
   position: fixed;
   padding: 10px;
   right: 40px;
