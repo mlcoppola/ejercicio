@@ -1,7 +1,8 @@
+/* eslint-disable no-undef */
 import React from 'react';
 
-const { shallow } = require('enzyme');
-const { WoloxScreen } = require('../../../components/wolox/WoloxScreen');
+import { shallow } from 'enzyme';
+import { WoloxScreen } from '../../../components/wolox/WoloxScreen';
 
 jest.mock('react', () => {
     const ActualReact = require.requireActual('react');

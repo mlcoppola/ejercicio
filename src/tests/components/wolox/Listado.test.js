@@ -1,7 +1,8 @@
+/* eslint-disable no-undef */
 import React from 'react';
 
-const { shallow } = require('enzyme');
-const { Listado } = require('../../../components/wolox/Listado');
+import { shallow } from 'enzyme';
+import { Listado } from '../../../components/wolox/Listado';
 
 describe('Pruebas en <Listado />', () => {
 
