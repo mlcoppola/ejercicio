@@ -63,7 +63,7 @@ export const LoginScreen = ({ history }) => {
     }
 
     return (
-        <>
+        <div className="animate__animated animate__fadeIn">
             <h3 className="auth__title">Login</h3>
             <form onSubmit={handleLogin}>
                 {
@@ -113,6 +113,6 @@ export const LoginScreen = ({ history }) => {
                 <Link to="/" className="auth__mantener enlace">Ir a la landing</Link>
             </form>
 
-        </>
+        </div>
     )
 }

@@ -86,7 +86,7 @@ export const WoloxScreen = () => {
 
             </div>
 
-            <div className="listado__contenedor-tecnologias">
+            <div className="listado__contenedor-tecnologias animate__animated animate__fadeIn">
 
                 {
                     filterTechs().map(tech => (
